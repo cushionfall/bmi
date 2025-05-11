@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bmi.css">
     <title>Bmi Calculator</title>
 </head>
 <body>
     <div class="container">
-        <div class="middle">
+        <div class="header">BMI CALCULATOR</div>
+        <div class="left_section">
             <label for="weight">Weight</label>
             <select id="choose_weight">
                 <option value="kg">Kg</option>
@@ -20,11 +22,67 @@
                 <option value="centimeter">Centimeter</option>
                 <option value="feet">Feet</option>
             </select>
-            <input type="text" id="height" placeholder="height">
+            <input type="text" id="height" placeholder="Height">
             <div id="sumbit_button">Sumbit</div>
+            <div class="output">
+           Your Bmi Index is:<span id="bmi_index"></span>
         </div>
-        <div class="output">
-            Bmi Index is:<span id="bmi_index"></span>
+        </div>
+        <div class="right_section">
+            <table class="table_chart">
+                <tr class="head_table">
+                <th class="heading">BMI RANGE</th>
+                <th class="heading">CATEGORY</th>
+                <th class="heading">HEALT RISK</th>
+                </tr>
+                <tr class="table_cont">
+                    <td class="detail">Less than 16</td>
+                    <td class="detail">	Severely underweight</td>
+                    <td class="detail">High</td>
+                </tr>
+                <tr class="table_cont">
+                    <td class="detail">16 to 16.9</td>
+                    <td class="detail">Underweight</td>
+                    <td class="detail">Moderate</td>
+                </tr>
+                <tr class="table_cont">
+                    <td class="detail">17 to 18.4</td>
+                    <td class="detail">Mildly underweight</td>
+                    <td class="detail">Mild</td>
+                </tr>
+                <tr class="table_cont">
+                    <td class="detail">18.5 to 24.9</td>
+                    <td class="detail">Normal weight</td>
+                    <td class="detail">Low (Healthy range)</td>
+                </tr>
+                <tr class="table_cont">
+                    <td class="detail">25 to 29.9</td>
+                    <td class="detail">Overweight</td>
+                    <td class="detail">Increased</td>
+                </tr>
+                <tr class="table_cont">
+                    <td class="detail">30 to 34.9</td>
+                    <td class="detail">Obese Class I</td>
+                    <td class="detail">Moderate (Obese)</td>
+                </tr>
+                <tr class="table_cont">
+                    <td class="detail">35 to 39.9</td>
+                    <td class="detail">Obese Class II</td>
+                    <td class="detail">Severe</td>
+                </tr>
+                <tr class="table_cont">
+                    <td class="detail">40 and above</td>
+                    <td class="detail">Obese Class III</td>
+                    <td class="detail">Very Severe (Morbid Obesity)</td>
+                </tr>
+            </table>
+            <span class="description">
+                ⚠️ Limitations of BMI
+                While BMI is useful, it doesnt measure fat directly, and it has some limitations:
+                Doesnt account for muscle mass (athletes may have high BMI but low fat)
+                Doesnt consider age, sex, or bone structure
+                Not suitable for children or elderly (they use different percentile charts)
+            </span>
         </div>
     </div>
 </body>
